@@ -2,17 +2,17 @@
 @version     1.0
 @author      IX
 @about       ...
-@provides    [data] ix_scales/Chromatic.txt        > ../../ix_scales/Chromatic.txt
-@provides    [data] ix_scales/Dorian.txt           > ../../ix_scales/Dorian.txt
-@provides    [data] ix_scales/Harmonic Minor.txt   > ../../ix_scales/Harmonic Minor.txt
-@provides    [data] ix_scales/Locrian.txt          > ../../ix_scales/Locrian.txt
-@provides    [data] ix_scales/Lydian.txt           > ../../ix_scales/Lydian.txt
-@provides    [data] ix_scales/Major.txt            > ../../ix_scales/Major.txt
-@provides    [data] ix_scales/Melodic Minor.txt    > ../../ix_scales/Melodic Minor.txt
-@provides    [data] ix_scales/Mixolydian.txt       > ../../ix_scales/Mixolydian.txt
-@provides    [data] ix_scales/Natural Minor.txt    > ../../ix_scales/Natural Minor.txt
+@provides    [data] ix_scales/Chromatic.txt > ../../ix_scales/Chromatic.txt
+@provides    [data] ix_scales/Dorian.txt > ../../ix_scales/Dorian.txt
+@provides    [data] ix_scales/Harmonic Minor.txt > ../../ix_scales/Harmonic Minor.txt
+@provides    [data] ix_scales/Locrian.txt > ../../ix_scales/Locrian.txt
+@provides    [data] ix_scales/Lydian.txt > ../../ix_scales/Lydian.txt
+@provides    [data] ix_scales/Major.txt > ../../ix_scales/Major.txt
+@provides    [data] ix_scales/Melodic Minor.txt > ../../ix_scales/Melodic Minor.txt
+@provides    [data] ix_scales/Mixolydian.txt > ../../ix_scales/Mixolydian.txt
+@provides    [data] ix_scales/Natural Minor.txt > ../../ix_scales/Natural Minor.txt
 @provides    [data] ix_scales/Pentatonic Major.txt > ../../ix_scales/Pentatonic Major.txt
 @provides    [data] ix_scales/Pentatonic Minor.txt > ../../ix_scales/Pentatonic Minor.txt
-@provides    [data] ix_scales/Phrygian.txt         > ../../ix_scales/Phrygian.txt
-@provides    [data] ix_scales/Whole Tone.txt       > ../../ix_scales/Whole Tone.txt
+@provides    [data] ix_scales/Phrygian.txt > ../../ix_scales/Phrygian.txt
+@provides    [data] ix_scales/Whole Tone.txt > ../../ix_scales/Whole Tone.txt
 

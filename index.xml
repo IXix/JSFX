@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="f9827335ea47229e0ffebb8e3595da7d273a1f1a">
+<index version="1" name="IX" commit="41b2c11d26a4cf956f4f48006af70ba2f43bad98">
+  <category name="Data">
+    <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ...\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
+        <source type="data" file="../../ix_keymaps/00 - Default Mapping.txt">https://github.com/IXix/JSFX/raw/41b2c11d26a4cf956f4f48006af70ba2f43bad98/Data/ix_keymaps/00%20-%20Default%20Mapping.txt</source>
+      </version>
+    </reapack>
+    <reapack name="ix_scales.data" type="data" desc="Scale files for IX effects">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ...\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
+        <source type="data" file="../../ix_scales/Whole Tone.txt">https://github.com/IXix/JSFX/raw/41b2c11d26a4cf956f4f48006af70ba2f43bad98/Data/ix_scales/Whole%20Tone.txt</source>
+      </version>
+    </reapack>
+    <reapack name="ix_sequences.data" type="data" desc="Sequence files for IX effects">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ...\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
+        <source type="data" file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/41b2c11d26a4cf956f4f48006af70ba2f43bad98/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Effects/Audio">
     <reapack name="Mixer_8xM-1xS.jsfx" type="effect" desc="Mixer 8 x Mono to 1 x Stereo">
       <metadata>
