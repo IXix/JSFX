@@ -2,7 +2,6 @@
 @version     1.0
 @author      IX
 @about       ...
-@noindex
 @provides    [data] ix_scales/Chromatic.txt        > ../../ix_scales/Chromatic.txt
 @provides    [data] ix_scales/Dorian.txt           > ../../ix_scales/Dorian.txt
 @provides    [data] ix_scales/Harmonic Minor.txt   > ../../ix_scales/Harmonic Minor.txt

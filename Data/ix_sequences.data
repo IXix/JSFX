@@ -2,7 +2,6 @@
 @version     1.0
 @author      IX
 @about       ...
-@noindex
 @provides    [data] ix_sequences/1 - All Notes.txt   > ../../ix_sequences/1 - All Notes.txt
 @provides    [data] ix_sequences/2 - Accent on 1.txt > ../../ix_sequences/2 - Accent on 1.txt
 @provides    [data] ix_sequences/2 - Accent on 2.txt > ../../ix_sequences/2 - Accent on 2.txt
