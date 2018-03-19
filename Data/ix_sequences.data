@@ -2,14 +2,15 @@
 @version     1.0
 @author      IX
 @about       ...
-@provides    [data] ix_sequences/1 - All Notes.txt > ../../ix_sequences/1 - All Notes.txt
-@provides    [data] ix_sequences/2 - Accent on 1.txt > ../../ix_sequences/2 - Accent on 1.txt
-@provides    [data] ix_sequences/2 - Accent on 2.txt > ../../ix_sequences/2 - Accent on 2.txt
-@provides    [data] ix_sequences/3 - Accent on 1.txt > ../../ix_sequences/3 - Accent on 1.txt
-@provides    [data] ix_sequences/3 - Accent on 2.txt > ../../ix_sequences/3 - Accent on 2.txt
-@provides    [data] ix_sequences/3 - Accent on 3.txt > ../../ix_sequences/3 - Accent on 3.txt
-@provides    [data] ix_sequences/4 - Accent On 1.txt > ../../ix_sequences/4 - Accent On 1.txt
-@provides    [data] ix_sequences/4 - Accent On 2.txt > ../../ix_sequences/4 - Accent On 2.txt
-@provides    [data] ix_sequences/4 - Accent On 3.txt > ../../ix_sequences/4 - Accent On 3.txt
-@provides    [data] ix_sequences/4 - Accent On 4.txt > ../../ix_sequences/4 - Accent On 4.txt
-@provides    [data] ix_sequences/5 - Accent on 5.txt > ../../ix_sequences/5 - Accent on 5.txt
+@provides
+  ix_sequences/1 - All Notes.txt > ../../ix_sequences/1 - All Notes.txt
+  ix_sequences/2 - Accent on 1.txt > ../../ix_sequences/2 - Accent on 1.txt
+  ix_sequences/2 - Accent on 2.txt > ../../ix_sequences/2 - Accent on 2.txt
+  ix_sequences/3 - Accent on 1.txt > ../../ix_sequences/3 - Accent on 1.txt
+  ix_sequences/3 - Accent on 2.txt > ../../ix_sequences/3 - Accent on 2.txt
+  ix_sequences/3 - Accent on 3.txt > ../../ix_sequences/3 - Accent on 3.txt
+  ix_sequences/4 - Accent On 1.txt > ../../ix_sequences/4 - Accent On 1.txt
+  ix_sequences/4 - Accent On 2.txt > ../../ix_sequences/4 - Accent On 2.txt
+  ix_sequences/4 - Accent On 3.txt > ../../ix_sequences/4 - Accent On 3.txt
+  ix_sequences/4 - Accent On 4.txt > ../../ix_sequences/4 - Accent On 4.txt
+  ix_sequences/5 - Accent on 5.txt > ../../ix_sequences/5 - Accent on 5.txt

@@ -2,4 +2,5 @@
 @version     1.0
 @author      IX
 @about       ...
-@provides    [data] ix_keymaps/00 - Default Mapping.txt > ../../ix_keymaps/00 - Default Mapping.txt
+@provides
+  ix_keymaps/00 - Default Mapping.txt > ../../ix_keymaps/00 - Default Mapping.txt

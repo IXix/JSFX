@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="41b2c11d26a4cf956f4f48006af70ba2f43bad98">
+<index version="1" name="IX" commit="0eea1d5388de4fab51080e3dfaeaee520985a7ab">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -26,7 +26,7 @@
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source type="data" file="../../ix_scales/Whole Tone.txt">https://github.com/IXix/JSFX/raw/41b2c11d26a4cf956f4f48006af70ba2f43bad98/Data/ix_scales/Whole%20Tone.txt</source>
+        <source type="data" file="../../ix_scales/Whole Tone.txt">https://github.com/IXix/JSFX/raw/0eea1d5388de4fab51080e3dfaeaee520985a7ab/Data/ix_scales/Whole%20Tone.txt</source>
       </version>
     </reapack>
     <reapack name="ix_sequences.data" type="data" desc="Sequence files for IX effects">
@@ -40,7 +40,7 @@
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source type="data" file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/41b2c11d26a4cf956f4f48006af70ba2f43bad98/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
+        <source type="data" file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/0eea1d5388de4fab51080e3dfaeaee520985a7ab/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
       </version>
     </reapack>
   </category>
