@@ -1,0 +1,58 @@
+/*******************************************************************************
+version: 1.0
+desc: SwixMitch (4x Stereo In, 2 Bus X-Fader)
+author: IX
+provides: . > ../../SwixMitch
+about:
+  # SwixMitch
+  Crossfade between busses A and B, fed from inputs 1+2 through 7+8.
+link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+********************************************************************************
+* Copyright 2007-2011 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc:SwixMitch (4x Stereo In, 2 Bus X-Fader)
+desc:SwixMitch 4x Stereo Input 2 Bus X-Fader [IXix]
+//tags: processing routing mixer
+//author: IXix
+
+
+slider1:3<0,3,1{Off,A,B,A+B}>Destination 1+2
+slider2:0<0,3,1{Off,A,B,A+B}>Destination 3+4
+slider3:0<0,3,1{Off,A,B,A+B}>Destination 5+6
+slider4:0<0,3,1{Off,A,B,A+B}>Destination 7+8
+slider5:0.5<0,1>Mix A<>B
+
+in_pin:input 1
+in_pin:input 2
+in_pin:input 3
+in_pin:input 4
+in_pin:input 5
+in_pin:input 6
+in_pin:input 7
+in_pin:input 8
+out_pin:output L
+out_pin:output R
+
+////////////////////////////////////////////////////////////////////////////////
+@slider
+dest12 = slider1;
+dest34 = slider2;
+dest56 = slider3;
+dest78 = slider4;
+
+slider5 = min(max(slider5, 0), 1);
+
+// Calculate the gain multipliers
+mixA = 1 - slider5;
+mixB = slider5;
+ch12 = (dest12 == 1 || dest12 == 3 ? 1:0) * mixA + (dest12 == 2 || dest12 == 3 ? 1:0) * mixB;
+ch34 = (dest34 == 1 || dest34 == 3 ? 1:0) * mixA + (dest34 == 2 || dest34 == 3 ? 1:0) * mixB;
+ch56 = (dest56 == 1 || dest56 == 3 ? 1:0) * mixA + (dest56 == 2 || dest56 == 3 ? 1:0) * mixB;
+ch78 = (dest78 == 1 || dest78 == 3 ? 1:0) * mixA + (dest78 == 2 || dest78 == 3 ? 1:0) * mixB;
+
+////////////////////////////////////////////////////////////////////////////////
+@sample
+spl0 = spl0 * ch12 + spl2 * ch34 + spl4 * ch56 + spl6 * ch78;
+spl1 = spl1 * ch12 + spl3 * ch34 + spl5 * ch56 + spl7 * ch78;

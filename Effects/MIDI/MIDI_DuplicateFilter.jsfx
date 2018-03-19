@@ -1,0 +1,99 @@
+/*******************************************************************************
+version: 1.0
+desc: MIDI Duplicate Note Filter
+author: IX
+provides: . > ../../MIDI_DuplicateFilter
+about:
+  # MIDI Duplicate Filter
+  Counts incoming on/off message for each note and filters out all except the
+  first on and last off, so overlapping short notes become one long note.
+link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+********************************************************************************
+* Copyright 2007-2011 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc: MIDI Duplicate Note Filter
+desc: MIDI Duplicate Note Filter [IXix]
+//tags: MIDI filter processing
+//author: IXix
+
+slider1:0<0,15,1{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}>Input Channel
+
+in_pin:none
+out_pin:none
+
+////////////////////////////////////////////////////////////////////////////////
+@init
+
+statNoteOn = $x90;
+statNoteOff = $x80;
+
+////////////////////////////////////////////////////////////////////////////////
+@slider
+inChannel = slider1;
+
+////////////////////////////////////////////////////////////////////////////////
+@block
+
+trigger & (2 ^ 0) ? // Reset counters and send all notes off on this channel.
+(
+  i = 0;
+  while
+  (
+    tracker[i] = 0;
+    midisend(0, statNoteOff + inChannel, i | 0 * 256);
+    (i += 1) < 127;
+  );
+  trigger -= 2 ^ 0;
+);
+
+while
+(
+  midirecv(offset, msg1, msg23) ?
+  (  
+    // Reset pass flag
+    passThru = 1;
+    
+    // Extract message type and channel
+    status = msg1 & $xF0;
+    channel = msg1 & $x0F;
+      
+    // Is it on our channel?
+    channel == inChannel ? 
+    (
+      // Is it a note event?
+      status == statNoteOn || status == statNoteOff ?
+      (
+        // Get note and velocity
+        note = msg23 & $x7F;
+        velocity = msg23 >> 8;
+        
+        // Update counters and flag to pass if necessary. Zero velocity is regarded as note off
+        status == statNoteOn && velocity > 0 ?
+        (
+          // Note on
+          tracker[note] += 1;
+          tracker[note] == 1 ? midisend(offset, msg1, msg23);
+        )
+        :
+        (
+          // Note off
+          tracker[note] -= 1;
+          tracker[note] == 0 ? midisend(offset, msg1, msg23);
+        );
+      )
+      :
+      (
+        midisend(offset, msg1, msg23); // Not a note, pass thru
+      );
+    )
+    :
+    (
+      midisend(offset, msg1, msg23); // Not on our channel, pass thru
+    );
+    
+    1; // Force loop to continue until all messages have been processed
+  );
+);
+
