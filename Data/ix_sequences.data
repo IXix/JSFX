@@ -1,7 +1,10 @@
 @description Sequence files for IX effects
 @version     1.0
 @author      IX
-@about       ...
+@about
+   Sample sequence files used by MIDI_Variant and MIDI_Velocifier. See wiki entry for details.
+@link
+   http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files
 @provides
   ix_sequences/1 - All Notes.txt > ../../ix_sequences/1 - All Notes.txt
   ix_sequences/2 - Accent on 1.txt > ../../ix_sequences/2 - Accent on 1.txt
