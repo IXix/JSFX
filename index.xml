@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="9293715ac22e8010f2e97f43c0bde98df2757cc6">
+<index version="1" name="IX" commit="2f70284fa402d2c6d4bd3af212f3b5fa79bfcaac">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -270,7 +270,7 @@ wiki entry.
         <source file="../../MIDI_Tool II">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Tool%20II.jsfx</source>
       </version>
     </reapack>
-    <reapack name="MIDI_Tool.jsfx" type="effect" desc="MIDI Tool">
+    <reapack name="MIDI_Tool.jsfx" type="effect" desc="MIDI_Tool (obsolete, use MIDI_Tool II)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -278,12 +278,12 @@ wiki entry.
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Tool (obsolete)\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Transform MIDI messages in various ways. Superceded by IX/MIDI_Tool II\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Tool\par}
 }
 ]]></description>
-        <link rel="website">http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins</link>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_Tool">https://github.com/IXix/JSFX/raw/f9827335ea47229e0ffebb8e3595da7d273a1f1a/Effects/MIDI/MIDI_Tool.jsfx</source>
+        <source file="../../MIDI_Tool">https://github.com/IXix/JSFX/raw/2f70284fa402d2c6d4bd3af212f3b5fa79bfcaac/Effects/MIDI/MIDI_Tool.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Variant.jsfx" type="effect" desc="MIDI_Variant (pattern/scale variation generator)">
