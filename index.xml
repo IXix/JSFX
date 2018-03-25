@@ -341,7 +341,8 @@ wiki entry.
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 IX JSFX\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 A collection of effects and utilities for REAPER (https://www.reaper.fm/)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 A collection of effects and utilities for REAPER.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Documentation for plugins (well, some of them) can be found at http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins\par}
 }
 ]]></description>
   </metadata>
