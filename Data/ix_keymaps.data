@@ -2,6 +2,6 @@
 @version     1.0
 @author      IX
 @about
-   Sample mapping file (no altered notes) used by MIDI_KeyMap. For details of how to define mappings see [wiki entry for details](http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_KeyMap_Files).
+   Sample mapping file (no altered notes) used by MIDI_KeyMap. For details of how to define mappings see [wiki entry.](http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_KeyMap_Files)
 @provides
   ix_keymaps/00 - Default Mapping.txt > ../../ix_keymaps/00 - Default Mapping.txt
