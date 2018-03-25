@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Tool
+desc: MIDI_Tool (obsolete, use MIDI_Tool II)
 author: IX
 provides: . > ../../MIDI_Tool
 about:
   # MIDI Tool (obsolete)
   Transform MIDI messages in various ways.
   Superceded by IX/MIDI_Tool II
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Tool
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html
