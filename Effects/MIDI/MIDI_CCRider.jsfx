@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI CC LFO Generator
+desc: MIDI_CCRider (CC LFO generator)
 author: IX
 provides: . > ../../MIDI_CCRider
 about:
   # MIDI CC Rider
   Generates MIDI CC messages with an LFO.
   Useful back in the day. Pretty obsolete these days. 
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#CCRider
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

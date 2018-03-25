@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Router
+desc: MIDI_Router (send note range to channel)
 author: IX
 provides: . > ../../MIDI_Router
 about:
   # MIDI Router
   MIDI messages on input channel are diverted to the output channel.
   Can route notes, non-notes or all messages. Notes can be transposed.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Router
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

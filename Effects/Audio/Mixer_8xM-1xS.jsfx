@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: Mixer 8 x Mono to 1 x Stereo
+desc: Mixer_8xM-1xS (8 x mono to 1 x stereo)
 author: IX
 provides: . > ../../Mixer_8xM-1xS
 about:
   # Mixer 8xM - 1xS
-  Mix inputs 1-8 into outputs 1+2
-  [http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Mixer_8xM-1xS]
+  Mix inputs 1-8 into outputs 1+2.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Mixer_8xM-1xS
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="2a706987860fb29c5f64235acf4b61667825d942">
+<index version="1" name="IX" commit="e1cb66c1d5b004190ffbb28d5f762ae457492063">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -53,7 +53,7 @@ wiki entry.
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Sample sequence files used by MIDI_Variant and MIDI_Velocifier. For details of how to define sequences see {\field{\*\fldinst{HYPERLINK "http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files"}}{\fldrslt{\ul
+{\pard \ql \f0 \sa180 \li0 \fi0 Sample sequence files used by MIDI_Variant and MIDI_Velocifier II. For details of how to define sequences see {\field{\*\fldinst{HYPERLINK "http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files"}}{\fldrslt{\ul
 wiki entry.
 }}}
 \par}
@@ -61,17 +61,17 @@ wiki entry.
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source file="../../ix_sequences/1 - All Notes.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/1%20-%20All%20Notes.txt</source>
-        <source file="../../ix_sequences/2 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/2%20-%20Accent%20on%201.txt</source>
-        <source file="../../ix_sequences/2 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/2%20-%20Accent%20on%202.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%201.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%202.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 3.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%203.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%201.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%202.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 3.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%203.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 4.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%204.txt</source>
-        <source file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
+        <source file="../../ix_sequences/1 - All Notes.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/1%20-%20All%20Notes.txt</source>
+        <source file="../../ix_sequences/2 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/2%20-%20Accent%20on%201.txt</source>
+        <source file="../../ix_sequences/2 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/2%20-%20Accent%20on%202.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/3%20-%20Accent%20on%201.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/3%20-%20Accent%20on%202.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 3.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/3%20-%20Accent%20on%203.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 1.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/4%20-%20Accent%20On%201.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 2.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/4%20-%20Accent%20On%202.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 3.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/4%20-%20Accent%20On%203.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 4.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/4%20-%20Accent%20On%204.txt</source>
+        <source file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
       </version>
     </reapack>
   </category>
@@ -83,13 +83,12 @@ wiki entry.
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Mixer 8xM - 1xS\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Mix inputs 1-8 into outputs 1+2\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Mix inputs 1-8 into outputs 1+2 [http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Mixer_8xM-1xS]\par}
 }
 ]]></description>
-        <link rel="website">http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins</link>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../Mixer_8xM-1xS">https://github.com/IXix/JSFX/raw/f9827335ea47229e0ffebb8e3595da7d273a1f1a/Effects/Audio/Mixer_8xM-1xS.jsfx</source>
+        <source file="../../Mixer_8xM-1xS">https://github.com/IXix/JSFX/raw/e1cb66c1d5b004190ffbb28d5f762ae457492063/Effects/Audio/Mixer_8xM-1xS.jsfx</source>
       </version>
     </reapack>
     <reapack name="Mixer_8xS-1xS.jsfx" type="effect" desc="Mixer 8 x Stereo to 1 x Stereo">

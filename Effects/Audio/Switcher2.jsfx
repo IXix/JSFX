@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: Channel input selector
+desc: Switcher2 (channel input selector)
 author: IX
 provides: . > ../../Switcher2
 about:
   # Switcher 2
   Send from input pairs 1+2 through 7+8 to outputs 1+2
   Switcher 3 is better but this uses a tiny bit less CPU if you're desperate.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Switcher_2
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

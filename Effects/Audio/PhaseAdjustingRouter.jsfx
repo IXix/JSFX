@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: Signal router with polarity options
+desc: PhaseAdjustingRouter (signal router with polarity options)
 author: IX
 provides: . > ../../PhaseAdjustingRouter
 about:
   # Phase Adjusting Router
   Send input channels to output channels with optional polarity adjustments.
   Output can either replace or merge with existing audio on the output channels.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#PhaseAdjustingRouter
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

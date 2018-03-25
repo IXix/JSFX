@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 2.0
-desc: MIDI Note mapping tool
+desc: MIDI_KeyMap (note mapping tool)
 author: IX
 provides: . > ../../MIDI_KeyMap
 about:
   # MIDI KeyMap
   Incoming notes are transformed according to the data in the selected map file.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeyMap
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

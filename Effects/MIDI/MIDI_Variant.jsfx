@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Pattern/Scale Variation Generator
+desc: MIDI_Variant (pattern/scale variation generator)
 author: IX
 provides: . > ../../MIDI_Variant
 about:
   # MIDI Variant
-  Creates variation in incoming notes messages.
+  Creates variation in incoming note messages.
   When triggered by the pattern, outputs a random note from the specified scale.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Variant
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

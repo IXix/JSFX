@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: SwixMitch (4x Stereo In, 2 Bus X-Fader)
+desc: SwixMitch (4x stereo in, 2 bus X-fader)
 author: IX
 provides: . > ../../SwixMitch
 about:
   # SwixMitch
   Crossfade between busses A and B, fed from inputs 1+2 through 7+8.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#SwixMitch
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

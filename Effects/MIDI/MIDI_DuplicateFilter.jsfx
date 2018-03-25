@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Duplicate Note Filter
+desc: MIDI_DuplicateFilter (duplicate note filter)
 author: IX
 provides: . > ../../MIDI_DuplicateFilter
 about:
   # MIDI Duplicate Filter
   Counts incoming on/off message for each note and filters out all except the
   first on and last off, so overlapping short notes become one long note.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#DuplicateFilter
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

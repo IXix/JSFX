@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: Channel polarity control
+desc: StereoPhaseInvert (stereo channel polarity control)
 author: IX
 provides: . > ../../StereoPhaseInvert
 about:
   # Stereo Phase Inverter
   Independent adjustment of left/right channel polarity.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#StereoPhaseInvert
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

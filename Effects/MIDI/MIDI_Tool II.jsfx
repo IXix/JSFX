@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Tool II
+desc: MIDI_Tool II (transform note/velocity/channel)
 author: IX
 provides: . > ../../MIDI_Tool II
 about:
   # MIDI Tool II
   Transform MIDI messages in various ways.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Tool_II
 ********************************************************************************
 * Copyright 2007-2013 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

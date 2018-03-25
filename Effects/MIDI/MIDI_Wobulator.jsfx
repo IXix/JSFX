@@ -1,13 +1,14 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Pitch Wheel LFO
+desc: MIDI_Wobulator (pitch wheel LFO)
 author: IX
 provides: . > ../../MIDI_Wobulator
 about:
   # MIDI Wobulator
   Sends pitch wheel messages with an LFO.
   Better methods of pitch modulation exist but none with a cool name like this.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Wobulator
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

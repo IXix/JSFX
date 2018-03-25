@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Snap to Key
+desc: MIDI_KeySnap (snap notes to musical key)
 author: IX
 provides: . > ../../MIDI_KeySnap
 about:
   # MIDI Key Snap
   Out of key notes are either blocked or mapped to the nearest in key note.
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeySnap
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

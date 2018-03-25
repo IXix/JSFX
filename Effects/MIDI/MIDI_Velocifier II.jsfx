@@ -1,12 +1,13 @@
 /*******************************************************************************
 version: 1.0
-desc: MIDI Velocity Variation Generator
+desc: MIDI_Velocifier II (velocity variation generator)
 author: IX
 provides: . > ../../MIDI_Velocifier II
 about:
   # MIDI Velocifier II
   Modifies incoming velocities according to a pattern file
-link: http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Jesusonic_Plugins
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Velocifier_II
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html
