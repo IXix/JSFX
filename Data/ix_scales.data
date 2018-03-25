@@ -1,7 +1,8 @@
 @description Scale files for IX effects
 @version     1.0
 @author      IX
-@about       ...
+@about
+   Sample scale files used by MIDI_KeySnap and MIDI_Variant. For details of how to define scales see [wiki entry for details](http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Scale_Files).
 @provides
   ix_scales/Chromatic.txt > ../../ix_scales/Chromatic.txt
   ix_scales/Dorian.txt > ../../ix_scales/Dorian.txt

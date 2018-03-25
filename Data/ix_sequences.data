@@ -2,9 +2,7 @@
 @version     1.0
 @author      IX
 @about
-   Sample sequence files used by MIDI_Variant and MIDI_Velocifier.
-   
-   Sequences are defined by simple text files. For details see [wiki entry for details](http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files).
+   Sample sequence files used by MIDI_Variant and MIDI_Velocifier. For details of how to define sequences see [wiki entry for details](http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files).
 @provides
   ix_sequences/1 - All Notes.txt > ../../ix_sequences/1 - All Notes.txt
   ix_sequences/2 - Accent on 1.txt > ../../ix_sequences/2 - Accent on 1.txt
