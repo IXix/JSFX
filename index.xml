@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="05fc85d0b3e46776c8ff8239072378b3629706d1">
+<index version="1" name="IX" commit="2a706987860fb29c5f64235acf4b61667825d942">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -8,14 +8,14 @@
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 Sample mapping file (no altered notes) used by MIDI_KeyMap. For details of how to define mappings see {\field{\*\fldinst{HYPERLINK "http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_KeyMap_Files"}}{\fldrslt{\ul
-wiki entry for details
+wiki entry.
 }}}
-.\par}
+\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source file="../../ix_keymaps/00 - Default Mapping.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_keymaps/00%20-%20Default%20Mapping.txt</source>
+        <source file="../../ix_keymaps/00 - Default Mapping.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_keymaps/00%20-%20Default%20Mapping.txt</source>
       </version>
     </reapack>
     <reapack name="ix_scales.data" type="data" desc="Scale files for IX effects">
@@ -25,26 +25,26 @@ wiki entry for details
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 Sample scale files used by MIDI_KeySnap and MIDI_Variant. For details of how to define scales see {\field{\*\fldinst{HYPERLINK "http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Scale_Files"}}{\fldrslt{\ul
-wiki entry for details
+wiki entry.
 }}}
-.\par}
+\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source file="../../ix_scales/Chromatic.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Chromatic.txt</source>
-        <source file="../../ix_scales/Dorian.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Dorian.txt</source>
-        <source file="../../ix_scales/Harmonic Minor.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Harmonic%20Minor.txt</source>
-        <source file="../../ix_scales/Locrian.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Locrian.txt</source>
-        <source file="../../ix_scales/Lydian.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Lydian.txt</source>
-        <source file="../../ix_scales/Major.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Major.txt</source>
-        <source file="../../ix_scales/Melodic Minor.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Melodic%20Minor.txt</source>
-        <source file="../../ix_scales/Mixolydian.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Mixolydian.txt</source>
-        <source file="../../ix_scales/Natural Minor.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Natural%20Minor.txt</source>
-        <source file="../../ix_scales/Pentatonic Major.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Pentatonic%20Major.txt</source>
-        <source file="../../ix_scales/Pentatonic Minor.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Pentatonic%20Minor.txt</source>
-        <source file="../../ix_scales/Phrygian.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Phrygian.txt</source>
-        <source file="../../ix_scales/Whole Tone.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_scales/Whole%20Tone.txt</source>
+        <source file="../../ix_scales/Chromatic.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Chromatic.txt</source>
+        <source file="../../ix_scales/Dorian.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Dorian.txt</source>
+        <source file="../../ix_scales/Harmonic Minor.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Harmonic%20Minor.txt</source>
+        <source file="../../ix_scales/Locrian.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Locrian.txt</source>
+        <source file="../../ix_scales/Lydian.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Lydian.txt</source>
+        <source file="../../ix_scales/Major.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Major.txt</source>
+        <source file="../../ix_scales/Melodic Minor.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Melodic%20Minor.txt</source>
+        <source file="../../ix_scales/Mixolydian.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Mixolydian.txt</source>
+        <source file="../../ix_scales/Natural Minor.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Natural%20Minor.txt</source>
+        <source file="../../ix_scales/Pentatonic Major.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Pentatonic%20Major.txt</source>
+        <source file="../../ix_scales/Pentatonic Minor.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Pentatonic%20Minor.txt</source>
+        <source file="../../ix_scales/Phrygian.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Phrygian.txt</source>
+        <source file="../../ix_scales/Whole Tone.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_scales/Whole%20Tone.txt</source>
       </version>
     </reapack>
     <reapack name="ix_sequences.data" type="data" desc="Sequence files for IX effects">
@@ -54,24 +54,24 @@ wiki entry for details
 \widowctrl\hyphauto
 
 {\pard \ql \f0 \sa180 \li0 \fi0 Sample sequence files used by MIDI_Variant and MIDI_Velocifier. For details of how to define sequences see {\field{\*\fldinst{HYPERLINK "http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#IX_Sequence_Files"}}{\fldrslt{\ul
-wiki entry for details
+wiki entry.
 }}}
-.\par}
+\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:38:47Z">
-        <source file="../../ix_sequences/1 - All Notes.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/1%20-%20All%20Notes.txt</source>
-        <source file="../../ix_sequences/2 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/2%20-%20Accent%20on%201.txt</source>
-        <source file="../../ix_sequences/2 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/2%20-%20Accent%20on%202.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/3%20-%20Accent%20on%201.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/3%20-%20Accent%20on%202.txt</source>
-        <source file="../../ix_sequences/3 - Accent on 3.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/3%20-%20Accent%20on%203.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 1.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/4%20-%20Accent%20On%201.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 2.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/4%20-%20Accent%20On%202.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 3.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/4%20-%20Accent%20On%203.txt</source>
-        <source file="../../ix_sequences/4 - Accent On 4.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/4%20-%20Accent%20On%204.txt</source>
-        <source file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/05fc85d0b3e46776c8ff8239072378b3629706d1/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
+        <source file="../../ix_sequences/1 - All Notes.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/1%20-%20All%20Notes.txt</source>
+        <source file="../../ix_sequences/2 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/2%20-%20Accent%20on%201.txt</source>
+        <source file="../../ix_sequences/2 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/2%20-%20Accent%20on%202.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%201.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%202.txt</source>
+        <source file="../../ix_sequences/3 - Accent on 3.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/3%20-%20Accent%20on%203.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 1.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%201.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 2.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%202.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 3.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%203.txt</source>
+        <source file="../../ix_sequences/4 - Accent On 4.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/4%20-%20Accent%20On%204.txt</source>
+        <source file="../../ix_sequences/5 - Accent on 5.txt">https://github.com/IXix/JSFX/raw/2a706987860fb29c5f64235acf4b61667825d942/Data/ix_sequences/5%20-%20Accent%20on%205.txt</source>
       </version>
     </reapack>
   </category>
