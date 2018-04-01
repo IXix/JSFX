@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="f34c80a30fa9805561788347ed58c220e47c4ed6">
+<index version="1" name="IX" commit="98c28a21d5e0c57c6007d8f9b281036e0d54f900">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -446,6 +446,23 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_Wobulator">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Wobulator.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="Switcher3.jsfx" type="effect" desc="Switcher3 (channel input selector)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Switcher 3\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Send from selectable stereo inputs A, B, C or D to outputs 1+2 with adjustable crossfade to avoid clicks.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Switcher_3\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.1" author="IX" time="2018-04-01T21:01:45Z">
+        <changelog><![CDATA[+ Better crossfade code using one-pole filter (thanks SaulT!)]]></changelog>
+        <source file="../../Switcher3">https://github.com/IXix/JSFX/raw/98c28a21d5e0c57c6007d8f9b281036e0d54f900/Effects/MIDI/Switcher3.jsfx</source>
       </version>
     </reapack>
   </category>
