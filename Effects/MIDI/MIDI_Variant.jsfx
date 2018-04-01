@@ -1,5 +1,5 @@
 /*******************************************************************************
-version: 1.0
+version: 1.1
 desc: MIDI_Variant (pattern/scale variation generator)
 author: IX
 provides: . > ../../MIDI_Variant
@@ -11,6 +11,9 @@ about:
   http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Variant
   
   Note: Requires user defined scale and sequence files. Samples are provided in the packages "Scale files for IX effects" and "Sequence files for IX effects".
+changelog:
+  v1.1
+  + fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html
@@ -54,6 +57,10 @@ statNoteOn = $x90;
 
 // File change flags
 scaleFile = seqFile -1;
+
+step = 0;
+
+memset(inputTracker,0,128);
 
 ////////////////////////////////////////////////////////////////////////////////
 @slider
@@ -157,7 +164,7 @@ while
               );
               
               // Advance/reset step counter
-              (step += 1) >= seqSize ?
+              (step += 1) > seqSize ?
               (
                 step = 0;
               );

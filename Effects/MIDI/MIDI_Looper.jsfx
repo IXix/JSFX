@@ -1,0 +1,301 @@
+/*******************************************************************************
+version: 1.0
+desc: MIDI_Looper
+author: IX
+provides: . > ../../MIDI_Looper
+about:
+  # MIDI Looper
+  Loops all incoming MIDI except sysex messages.
+********************************************************************************
+* Copyright 2008 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+////////////////////////////////////////////////////////////////////////////////////////////
+desc: MIDI Looper
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+slider1:0<0,15,1{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}>Input Channel
+
+slider2:4<0,1000,1>Loop Length
+
+slider3:0<0,4,1{Beats,Seconds,Milliseconds,Samples}>Loop Units
+
+slider4:0<0,100,1>Repeats (0 = infinite)
+
+slider5:0<0,1,1{No,Yes}>Fade
+
+slider6:1<0,1,1{Off,On}>Record
+
+slider7:1<0,1,1{No,Yes}>Dry Output
+
+////////////////////////////////////////////////////////////////////////////////////////////
+@init
+
+//Prevent buffers being cleared by transport events
+ext_noinit = 1;
+
+//Some 'constants'
+statNoteOff = $x80;
+statNoteOn = $x90;
+statSysEx = $xF0;
+
+inf = -123456789;	//special value
+
+eventMsg1 = 0;		// status + channel
+eventMsg2 = 1;		// data byte 1
+eventMsg3 = 2;		// data byte 2
+eventTimer = 3;		// timer
+eventCounter = 4;	// iteration counter
+eventFade = 5;		// fade multiplier
+eventSize = 6;		//size of event data structure
+
+//Memory offsets
+noteTracker = 0;
+buffer = 128;
+
+////////////////////////////////////////////////////////////////////////////////////////////
+@slider
+
+inChannel = slider1;
+
+//Loop length
+l = slider2;
+
+//Length units. Flag reset if this changes
+slider3 != u ?
+(
+	u = slider3;
+	reset = 1;
+);
+
+//Repeats
+slider4 = floor(slider4);
+slider4 < 0 ? slider4 = 0;
+r = slider4 == 0 ? inf : slider4;
+
+//Fade (for new, non-infinite notes only)
+slider5 == 1 ?
+(
+	r != inf ?
+		f = (100 / r) * .01 : f = inf;
+)		
+:
+	f = inf; //Infinite repeats, flag not to fade
+
+//Record switch
+rec = slider6;
+
+//Dry output switch
+dry = slider7;
+
+////////////////////////////////////////////////////////////////////////////////////////////
+@block
+
+//Check reset trigger
+trigger & (2^0) ?
+(
+	reset = 1;
+	trigger -= 2^0;	//FIXME Do we need this?
+);
+
+//Check record trigger
+trigger & (2^1) ?
+(
+	slider6 == 0 ? slider6 = 1 : slider6 = 0;	//Toggle record slider
+	sliderchange(slider6);
+	rec = slider6;
+);
+
+//Recalculate loop time as srate or tempo may have changed.
+//u == 0 ? t = l * floor((60/tempo) * srate);	//Beats
+
+u == 0 ? t = l * (60/tempo) * srate;		//Beats
+u == 1 ? t = l * srate;				//Seconds
+u == 2 ? t = l * srate/1000;			//Milliseconds
+u == 3 ? t = l * u;				//Samples
+
+//No fractions. Flag reset if zero loop
+t = floor(t);
+t == 0 ? reset = 1;
+
+//Reset if flagged
+reset == 1 ?
+(
+	reset = 0;
+	i = 0;
+
+	//Send all notes off
+	while
+	(
+		midisend(0,statNoteOn + inChannel,i);
+		midisend(0,statNoteOff + inChannel,i);
+		noteTracker[i] = 0;
+		i += 1;
+		i < 128;
+	);
+	
+	//Clear buffers
+	c = eventCount;
+	i = 0;
+	loop
+	(
+		c, //loop count
+		buffer[i] = 0;
+		buffer[i+1] = 0;
+		buffer[i+2] = 0;
+		buffer[i+3] = 0;
+		buffer[i+4] = 0;
+		buffer[i+5] = 0;
+		i += eventSize;
+		eventCount -= 1;
+	);
+);
+
+//Update if necessary
+t != loopTime ?
+(
+	c = 0;
+	scale = t / loopTime;
+	loopTime = t;
+	
+	//Scale existing loop to new time
+	loop
+	(
+		eventCount, //loop count
+		buffer[c+3] *= scale;
+		c += eventSize;
+	);
+);
+
+//Process stored events
+i = 0;
+c = eventCount;
+loop
+(
+	c, //loop count
+	
+	//Does event fire in this block?
+	buffer[i+3] < samplesblock ?
+		(
+			//If no more iterations, remove event and compact the buffer
+			buffer[i+4] == 0 ?
+			(
+				//compute memory offset of last event
+				last = (eventCount - 1 ) * eventSize;
+				
+				//if last, just remove
+				i == last ?
+				(
+					buffer[i] = 0;
+					buffer[i+1] = 0;
+					buffer[i+2] = 0;
+					buffer[i+3] = 0;
+					buffer[i+4] = 0;
+					buffer[i+5] = 0;
+				)
+				:
+				(
+					//Copy last event to this location
+					buffer[i] = buffer[last];
+					buffer[i+1] = buffer[last+1];
+					buffer[i+2] = buffer[last+2];
+					buffer[i+3] = buffer[last+3];
+					buffer[i+4] = buffer[last+4];
+					buffer[i+5] = buffer[last+5];
+
+					//Clean up
+					buffer[last] = 0;
+					buffer[last+1] = 0;
+					buffer[last+2] = 0;
+					buffer[last+3] = 0;
+					buffer[last+4] = 0;
+					buffer[last+5] = 0;
+					
+					i -= eventSize; //rewind so we process the event that was just moved			
+				);
+				
+				eventCount -= 1;
+			)
+			:
+			(
+				//Send data
+				midisend(buffer[i+3],buffer[i],buffer[i+1]|(buffer[i+2]*256));
+
+
+
+				//Reset loop counter
+				buffer[i+3] = loopTime;
+				
+				//Decrement iteration counter
+				buffer[i+4] != inf ?
+				(
+					buffer[i+4] -= 1;
+
+					//Fade velocity
+					buffer[i] & 240 == statNoteOn ?
+						buffer[i+5] != inf ?
+							buffer[i+2] = floor(buffer[i+2] * (buffer[i+4]*buffer[i+5]));
+				);
+
+			);
+		)
+		:
+			//Decrement loop timer
+			buffer[i+3] -= samplesblock;
+
+	//Move to next event
+	i += eventSize;
+);
+
+//Process new events
+while
+(
+	midirecv(offset,msg1,msg23) ?
+	(	
+		//Check status byte
+		status = msg1 & 240;	//High four bits is message type (240 == 11110000)
+		channel = msg1 & 15;	//Low four bits is channel number (15 == 00001111)
+		
+		//Decide whether to buffer the message
+		process = 0;
+		status >= statNoteOff && status < statSysEx && channel == inChannel ? process = 1;
+		
+		rec == 0 ?
+			process = 0; //Overide if record flag is off
+		
+		//Ggood to go?
+		process == 1 ?
+		(
+			//Seperate the data bytes
+			d1 = msg23 & 127;
+			d2 = (msg23/256) & 127;
+				
+			//Is it a note event?
+			status == statNoteOn || status == statNoteOff ?
+			(
+				d2 == 0 ?
+					status = statNoteOff;	//Convert fake note-offs to real ones
+				noteTracker[d1] = status == statNoteOn ? d2 : 0;
+			);
+			
+			//Add event to buffer.
+			last = eventCount * eventSize;
+
+			buffer[last] = status + channel;
+			buffer[last+1] = d1;
+			buffer[last+2] = d2;
+			buffer[last+3] = loopTime;
+			buffer[last+4] = r;
+			buffer[last+5] = f;
+			eventCount += 1;
+			
+			dry == 1 ?
+				midisend(offset,msg1,msg23); //Pass the 'dry' signal
+		)
+		:
+		midisend(offset,msg1,msg23); //Not on our channel, pass thru
+	);
+);
+
