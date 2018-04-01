@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="c25f28d5640fe6298fb42796adba1b460b2dec52">
+<index version="1" name="IX" commit="96c37b3eef3041f63808dfc06db23853922eb57d">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -215,12 +215,12 @@ wiki entry.
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI KeyMap\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Incoming notes are transformed according to the data in the selected map file.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeyMap\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined key mapping files. A sample mapping is provided in the package "Key map files for IX effects"\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined key mapping files. A sample is provided in the package "Key map files for IX effects".\par}
 }
 ]]></description>
       </metadata>
       <version name="2.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/c25f28d5640fe6298fb42796adba1b460b2dec52/Effects/MIDI/MIDI_KeyMap.jsfx</source>
+        <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_KeyMap.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_KeySnap.jsfx" type="effect" desc="MIDI_KeySnap (snap notes to musical key)">
@@ -232,11 +232,12 @@ wiki entry.
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Key Snap\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Out of key notes are either blocked or mapped to the nearest in key note.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeySnap\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined scale files. Samples are provided in the package "Scale files for IX effects".\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_KeySnap">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_KeySnap.jsfx</source>
+        <source file="../../MIDI_KeySnap">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_KeySnap.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Router.jsfx" type="effect" desc="MIDI_Router (send note range to channel)">
@@ -296,11 +297,12 @@ wiki entry.
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Variant\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Creates variation in incoming note messages. When triggered by the pattern, outputs a random note from the specified scale.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Variant\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined scale and sequence files. Samples are provided in the package "Scale files for IX effects" and "Sequence files for IX effects".\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Variant.jsfx</source>
+        <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_Variant.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Velocifier II.jsfx" type="effect" desc="MIDI_Velocifier II (velocity variation generator)">
@@ -312,11 +314,12 @@ wiki entry.
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Velocifier II\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Modifies incoming velocities according to a pattern file\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Velocifier_II\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined sequence files. Samples are provided in the package "Sequence files for IX effects".\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_Velocifier II">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Velocifier%20II.jsfx</source>
+        <source file="../../MIDI_Velocifier II">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_Velocifier%20II.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Wobulator.jsfx" type="effect" desc="MIDI_Wobulator (pitch wheel LFO)">
