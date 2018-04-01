@@ -8,6 +8,8 @@ about:
   Modifies incoming velocities according to a pattern file
   
   http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Velocifier_II
+  
+  Note: Requires user defined sequence files. Samples are provided in the package "Sequence files for IX effects".
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

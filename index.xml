@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="2f70284fa402d2c6d4bd3af212f3b5fa79bfcaac">
+<index version="1" name="IX" commit="c25f28d5640fe6298fb42796adba1b460b2dec52">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -215,11 +215,12 @@ wiki entry.
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI KeyMap\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Incoming notes are transformed according to the data in the selected map file.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeyMap\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Requires user defined key mapping files. A sample mapping is provided in the package "Key map files for IX effects"\par}
 }
 ]]></description>
       </metadata>
       <version name="2.0" author="IX" time="2018-03-19T20:31:34Z">
-        <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_KeyMap.jsfx</source>
+        <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/c25f28d5640fe6298fb42796adba1b460b2dec52/Effects/MIDI/MIDI_KeyMap.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_KeySnap.jsfx" type="effect" desc="MIDI_KeySnap (snap notes to musical key)">
