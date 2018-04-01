@@ -1,0 +1,114 @@
+/*******************************************************************************
+version: 1.1
+desc: Switcher3 (channel input selector)
+author: IX
+provides: . > ../../Switcher3
+about:
+  # Switcher 3
+  Send from selectable stereo inputs A, B, C or D to outputs 1+2 with adjustable crossfade to avoid clicks.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Switcher_3
+changelog:
+  + Better crossfade code using one-pole filter (thanks SaulT!)
+********************************************************************************
+* Copyright 2007-2015 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc:Input switcher. Useful for A/B comparisons. v3.1
+
+slider1:0<0,3,1{A,B,C,D}>Output source
+slider2:0<-30,12,0.1>Output Level (dB)
+
+slider3:0<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>A Source
+slider4:0<-60,30,0.1>A Level (dB)
+
+slider5:1<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>B Source
+slider6:0<-60,30,0.1>B Level (dB)
+
+slider7:2<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>C Source
+slider8:0<-60,30,0.1>C Level (dB)
+
+slider9:3<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>D Source
+slider10:0<-60,30,0.1>D Level (dB)
+
+slider12:50<0,1000,10>Fade time (ms)
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@init
+ext_noinit = 1;
+
+gMin= -60;
+gMax = 30;
+s = 0;
+g = 4;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@slider
+
+slider4 = min(max(slider4, gMin), gMax);
+slider6 = min(max(slider6, gMin), gMax);
+slider8 = min(max(slider8, gMin), gMax);
+slider10 = min(max(slider10, gMin), gMax);
+
+// If anything has ghanged, signal to start crossfade
+source != slider1 ? change = 1;
+source == 0 && A != slider3 ? change = 1;
+source == 1 && B != slider5 ? change = 1;
+source == 2 && C != slider7 ? change = 1;
+source == 3 && D != slider9 ? change = 1;
+
+source = slider1;
+A = slider3;
+B = slider5;
+C = slider7;
+D = slider9;
+
+s[0] = A * 2;
+s[1] = B * 2;
+s[2] = C * 2;
+s[3] = D * 2;
+
+g[0] = 10 ^ (slider4 / 20);
+g[1] = 10 ^ (slider6 / 20);
+g[2] = 10 ^ (slider8 / 20);
+g[3] = 10 ^ (slider10 / 20);
+
+coeff = exp(-1 / (slider12 * 0.001 * srate / samplesblock));
+
+change == 1 ?
+(
+	pL = L;
+	pR = R;
+	pGain = gain;
+
+	L = s[source];
+	R = L + 1;
+
+	fadeGain = 1;
+	
+	change = 0;
+);
+
+gain = g[source];
+level = 10 ^ (slider2 / 20);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@block
+fadeGain = fadeGain * coeff;
+pG = pGain * fadeGain * level;
+cG = gain * (1 - fadeGain) * level;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@sample
+fadeGain ?
+(
+	spl0 = spl(pL) * pG + spl(L) * cG;
+	spl1 = spl(pR) * pG + spl(R) * cG;
+)
+:
+(
+	spl0 = spl(L) * cG;	
+	spl1 = spl(R) * cG;
+);
