@@ -6,6 +6,8 @@ provides: . > ../../MIDI_PatchUtil
 about:
   # MIDI Patch Utility
   Helper for sending MIDI bank/patch change messages.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#PatchUtil
 ********************************************************************************
 * Copyright 2008 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

@@ -6,6 +6,8 @@ provides: . > ../../MIDI_Looper
 about:
   # MIDI Looper
   Loops all incoming MIDI except sysex messages.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Looper
 ********************************************************************************
 * Copyright 2008 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

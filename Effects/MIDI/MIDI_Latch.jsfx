@@ -6,6 +6,8 @@ provides: . > ../../MIDI_Latch
 about:
   # MIDI Latch
   Latched keys hold until next keypress.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Latch
 ********************************************************************************
 * Copyright 2008 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

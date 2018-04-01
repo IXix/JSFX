@@ -6,8 +6,12 @@ provides: . > ../../MIDI_KeyMap II
 about:
   # MIDI KeyMap II
   Incoming notes are transformed according to internal mapping.
+  
   Slider 3 refers to input notes and will respond to incoming MIDI.
+  
   Slider 4 sets/displays the output note mapped to the input shown by slider 3.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#KeyMap_II
 changelog:
   +Added graphical mapping display
 ********************************************************************************

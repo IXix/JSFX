@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="d3f10eecf24056d851bd9d3bb0d0de8a379d0738">
+<index version="1" name="IX" commit="daaafae27e0ec09435dac20fc8b785055ddeead6">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -190,6 +190,22 @@ wiki entry.
         <source file="../../MIDI_CCRider">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_CCRider.jsfx</source>
       </version>
     </reapack>
+    <reapack name="MIDI_ChokingHazard.jsfx" type="effect" desc="MIDI_ChokingHazard (Note choke utility)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Choking Hazard\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Incoming notes choke (by note-off) up to four other notes.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#ChokingHazard\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.1" author="IX" time="2018-04-01T20:42:00Z">
+        <source file="../../MIDI_ChokingHazard">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_ChokingHazard.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="MIDI_DuplicateFilter.jsfx" type="effect" desc="MIDI_DuplicateFilter (duplicate note filter)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -204,6 +220,22 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_DuplicateFilter">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_DuplicateFilter.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_KeyMap II.jsfx" type="effect" desc="MIDI_KeyMap II (note mapping tool)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI KeyMap II\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Incoming notes are transformed according to internal mapping. Slider 3 refers to input notes and will respond to incoming MIDI. Slider 4 sets/displays the output note mapped to the input shown by slider 3.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.1" author="IX" time="2018-04-01T20:42:00Z">
+        <changelog><![CDATA[+Added graphical mapping display]]></changelog>
+        <source file="../../MIDI_KeyMap II">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_KeyMap%20II.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_KeyMap.jsfx" type="effect" desc="MIDI_KeyMap (note mapping tool)">
@@ -222,6 +254,11 @@ wiki entry.
       <version name="2.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_KeyMap.jsfx</source>
       </version>
+      <version name="2.1" author="IX" time="2018-04-01T20:42:00Z">
+        <changelog><![CDATA[v2.1
++ Added graphical mapping display]]></changelog>
+        <source file="../../MIDI_KeyMap">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_KeyMap.jsfx</source>
+      </version>
     </reapack>
     <reapack name="MIDI_KeySnap.jsfx" type="effect" desc="MIDI_KeySnap (snap notes to musical key)">
       <metadata>
@@ -238,6 +275,66 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_KeySnap">https://github.com/IXix/JSFX/raw/96c37b3eef3041f63808dfc06db23853922eb57d/Effects/MIDI/MIDI_KeySnap.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_Latch.jsfx" type="effect" desc="MIDI_Latch (note latching tool)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Latch\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Latched keys hold until next keypress.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-01T20:42:00Z">
+        <source file="../../MIDI_Latch">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_Latch.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_Looper.jsfx" type="effect" desc="MIDI_Looper">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Looper\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Loops all incoming MIDI except sysex messages.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-01T20:42:00Z">
+        <source file="../../MIDI_Looper">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_Looper.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_PatchUtil.jsfx" type="effect" desc="MIDI_PatchUtil (bank/patch select utility)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Patch Utility\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Helper for sending MIDI bank/patch change messages.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-01T20:42:00Z">
+        <source file="../../MIDI_PatchUtil">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_PatchUtil.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_Probalocity.jsfx" type="effect" desc="MIDI_Probalocity (pattern variation generator)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Probalocity\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Input velocity determines chance of whether note will be passed or blocked. Full (127) velocity notes will always be passed. Use Scale and Offset to bring output velocities to the required level. Scale lowers high velocities. Offset sets the base velocity level.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-01T20:42:00Z">
+        <source file="../../MIDI_Probalocity">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_Probalocity.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Router.jsfx" type="effect" desc="MIDI_Router (send note range to channel)">
@@ -303,6 +400,11 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/d3f10eecf24056d851bd9d3bb0d0de8a379d0738/Effects/MIDI/MIDI_Variant.jsfx</source>
+      </version>
+      <version name="1.1" author="IX" time="2018-04-01T20:42:00Z">
+        <changelog><![CDATA[v1.1
++ fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)]]></changelog>
+        <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/daaafae27e0ec09435dac20fc8b785055ddeead6/Effects/MIDI/MIDI_Variant.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Velocifier II.jsfx" type="effect" desc="MIDI_Velocifier II (velocity variation generator)">

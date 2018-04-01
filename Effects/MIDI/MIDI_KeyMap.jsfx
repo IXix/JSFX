@@ -11,7 +11,6 @@ about:
   
   Note: Requires user defined key mapping files. A sample is provided in the package "Key map files for IX effects".
 changelog:
-  v2.1
   + Added graphical mapping display
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine

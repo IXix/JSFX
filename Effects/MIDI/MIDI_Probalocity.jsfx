@@ -6,9 +6,14 @@ provides: . > ../../MIDI_Probalocity
 about:
   # MIDI Probalocity
   Input velocity determines chance of whether note will be passed or blocked.
+  
   Full (127) velocity notes will always be passed.
+  
   Use Scale and Offset to bring output velocities to the required level.
+  
   Scale lowers high velocities. Offset sets the base velocity level.
+  
+  http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#Probalocity
 ********************************************************************************
 * Copyright 2008 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html

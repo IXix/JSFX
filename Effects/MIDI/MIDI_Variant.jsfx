@@ -12,7 +12,6 @@ about:
   
   Note: Requires user defined scale and sequence files. Samples are provided in the packages "Scale files for IX effects" and "Sequence files for IX effects".
 changelog:
-  v1.1
   + fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
