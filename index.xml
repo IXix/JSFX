@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="d43a6d6e641f66c340d465c9ff1447566649ae9b">
+<index version="1" name="IX" commit="06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -108,6 +108,36 @@ wiki entry.
         <source file="../../Mixer_8xS-1xS">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/Audio/Mixer_8xS-1xS.jsfx</source>
       </version>
     </reapack>
+    <reapack name="MuteOnStop.jsfx" type="effect" desc="MuteOnStop">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Mute On Stop\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Block audio on selected stereo channels when transport is stopped.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../MuteOnStop.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/Audio/MuteOnStop.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MuteRangeOnStop.jsfx" type="effect" desc="MuteRangeOnStop">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Mute Range On Stop\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Block audio on selected channel range when transport is stopped.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../MuteRangeOnStop.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/Audio/MuteRangeOnStop.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="PhaseAdjustingRouter.jsfx" type="effect" desc="PhaseAdjustingRouter (signal router with polarity options)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -173,6 +203,21 @@ wiki entry.
         <source file="../../Switcher3">https://github.com/IXix/JSFX/raw/d43a6d6e641f66c340d465c9ff1447566649ae9b/Effects/Audio/Switcher3.jsfx</source>
       </version>
     </reapack>
+    <reapack name="Switcher5.jsfx" type="effect" desc="Switcher5 (channel input selector)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Switcher 5\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Send from selectable stereo inputs A, B, C or D to outputs 1+2 with adjustable crossfade to avoid clicks. Optionally block audio from source channels.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../Switcher5.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/Audio/Switcher5.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="SwixMitch.jsfx" type="effect" desc="SwixMitch (4x stereo in, 2 bus X-fader)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -191,6 +236,21 @@ wiki entry.
     </reapack>
   </category>
   <category name="Effects/MIDI">
+    <reapack name="MIDI_AntiFlam.jsfx" type="effect" desc="MIDI_Antiflam (duplicate note blocker)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI Antiflam\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Block duplicate note messages occurring within specified time within range of notes on specified channel.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../MIDI_Antiflam.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/MIDI/MIDI_AntiFlam.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="MIDI_CCRider.jsfx" type="effect" desc="MIDI_CCRider (CC LFO generator)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -237,6 +297,22 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_DuplicateFilter">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_DuplicateFilter.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="MIDI_HighPriority.jsfx" type="effect" desc="MIDI_HighPriority (monosynth behaviour for polysynth)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI High Priority\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Simulates monophonic synth behaviour for polyphonic synths.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Higher notes cause lower notes to stop but releasing the high note will reactivate the lower note.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../MIDI_HighPriority.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/MIDI/MIDI_HighPriority.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_KeyMap II.jsfx" type="effect" desc="MIDI_KeyMap II (note mapping tool)">
@@ -379,6 +455,21 @@ wiki entry.
         <source file="../../MIDI_Router">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Router.jsfx</source>
       </version>
     </reapack>
+    <reapack name="MIDI_SerialKiller.jsfx" type="effect" desc="MIDI_SerialKiller (pass one note at a time)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 MIDI High Priority\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Pass only one note at a time. Each new note kills the previous note.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../MIDI_SerialKiller.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/MIDI/MIDI_SerialKiller.jsfx</source>
+      </version>
+    </reapack>
     <reapack name="MIDI_Tool II.jsfx" type="effect" desc="MIDI_Tool II (transform note/velocity/channel)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -463,6 +554,43 @@ wiki entry.
       </metadata>
       <version name="1.0" author="IX" time="2018-03-19T20:31:34Z">
         <source file="../../MIDI_Wobulator">https://github.com/IXix/JSFX/raw/9293715ac22e8010f2e97f43c0bde98df2757cc6/Effects/MIDI/MIDI_Wobulator.jsfx</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Effects/Utility">
+    <reapack name="DC Generator.jsfx" type="effect" desc="DC Generator">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 DC Generator\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Utility for generating a DC signal at a specific amplitude.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 DC can be bad for speakers so ensure this effect is not routed to the master output! Output volume defaults to -60dB for safety.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../DC Generator.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/Utility/DC%20Generator.jsfx</source>
+      </version>
+    </reapack>
+    <reapack name="GlobalSliders.jsfx" type="effect" desc="GlobalSliders (globally synchronised sliders)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Global Sliders\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Utility for cross-track parameter linking.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Four banks of eight sliders for use with parameter modulation, using custom namespaces to avoid using global memory.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Slider updates are performed in @block since REAPER parameter modulation is also updated on a per block basis ie. there's no accuracy to be gained by moving the updates into @sample **\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 If you modify this, please replace references to the namespace IX.GlobalSliders with a namespace of your own to avoid clashes.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 ** this may no longer be true\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.4a" author="IX" time="2018-04-02T12:29:55Z">
+        <source file="../../GlobalSliders.jsfx">https://github.com/IXix/JSFX/raw/06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53/Effects/Utility/GlobalSliders.jsfx</source>
       </version>
     </reapack>
   </category>
