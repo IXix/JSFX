@@ -1,0 +1,41 @@
+/*******************************************************************************
+version: 1.0
+desc: MuteRangeOnStop
+author: IX
+provides: . > ../../MuteRangeOnStop.jsfx
+about:
+  # Mute Range On Stop
+  Block audio on selected channel range when transport is stopped.
+  
+********************************************************************************
+* Copyright 2015 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc:Mute selected channel range when transport is stopped
+slider1:1<0,64,1>Start channel
+slider2:2<1,64,1>End channel
+slider3:1<1,1,1{Bypassed,Active}>Bypass
+
+@slider
+
+slider1 = min(max(slider1|0, 1), 64);
+slider2 = min(max(slider2|0, 1), 64);
+
+c1 = min(slider1, slider2) - 1;
+c2 = max(slider1, slider2) - 1;
+
+count = c2 - c1 + 1;
+
+@block
+gain = (play_state & 1) * slider3;
+
+@sample
+s = c1;
+loop
+(
+  count,
+  spl(s) *= gain;
+  s += 1;
+);
+

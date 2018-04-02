@@ -1,0 +1,67 @@
+/*******************************************************************************
+version: 1.0
+desc: MIDI_SerialKiller (pass one note at a time)
+author: IX
+provides: . > ../../MIDI_SerialKiller.jsfx
+about:
+  # MIDI High Priority
+  Pass only one note at a time. Each new note kills the previous note.
+  
+********************************************************************************
+* Copyright 2012 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc: Pass one note at a time.
+
+in_pin:none
+out_pin:none
+
+slider1:0<0,15,1{1,2,3,4,5,6,7,8,9,10,11,12,13,14, 15,16}>Channel
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+@init
+last = 0;
+statNoteOff = $x80;
+statNoteOn = $x90;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+@slider
+inChannel = slider1;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+@block
+trigger & (2^0) ?
+	last ?
+		midisend(offset,statNoteOff + inChannel, last);
+
+while
+(
+	midirecv(offset,msg1,msg23) ?
+	(
+		status = msg1 & 240;
+		channel = msg1 & 15;
+
+		channel == inChannel ?
+		(
+   		 	status == statNoteOn || status == statNoteOff ?
+			(
+    				status == statNoteOn ?
+				(
+					//If there's a stored note, kill it
+					last ?
+						midisend(offset,statNoteOff + inChannel, last);
+
+					//Store this note
+					last = msg23;
+
+					midisend(offset,msg1,msg23) //Pass note on
+				);
+			)
+			:
+			midisend(offset,msg1,msg23); //Not a note, pass thru
+		)
+		:
+		midisend(offset,msg1,msg23); //Not on our channel, pass thru
+	);
+);

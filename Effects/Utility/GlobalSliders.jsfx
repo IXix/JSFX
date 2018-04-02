@@ -1,0 +1,118 @@
+/*******************************************************************************
+version: 1.4a
+desc: GlobalSliders (globally synchronised sliders)
+author: IX
+provides: . > ../../GlobalSliders.jsfx
+about:
+  # Global Sliders
+  Utility for cross-track parameter linking.
+  
+  Four banks of eight sliders for use with parameter modulation,
+  using custom namespaces to avoid using global memory.
+  
+  Slider updates are performed in @block since REAPER parameter
+  modulation is also updated on a per block basis ie. there's no
+  accuracy to be gained by moving the updates into @sample **
+  
+  If you modify this, please replace references to the namespace
+  IX.GlobalSliders with a namespace of your own to avoid clashes.
+  
+  ** this may no longer be true
+********************************************************************************
+* Copyright 2014 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc:Globally synchronised sliders (for parameter linking)
+
+in_pin:none
+out_pin:none
+
+slider1:0<0,3,1>bank
+slider2:0<0,100,0.0001>a
+slider3:0<0,100,0.0001>b
+slider4:0<0,100,0.0001>c
+slider5:0<0,100,0.0001>d
+slider6:0<0,100,0.0001>e
+slider7:0<0,100,0.0001>f
+slider8:0<0,100,0.0001>g
+slider9:0<0,100,0.0001>h
+
+@init
+bankchange = 1; // Prevent new instances from clearing existing values
+
+@serialize
+function SerializeBank(bank*)
+(
+  file_var(0, bank.a);
+  file_var(0, bank.b);
+  file_var(0, bank.c);
+  file_var(0, bank.d);
+  file_var(0, bank.e);
+  file_var(0, bank.f);
+  file_var(0, bank.g);
+  file_var(0, bank.h);
+);
+
+SerializeBank(_global.IX.GlobalSliders.A);
+SerializeBank(_global.IX.GlobalSliders.B);
+SerializeBank(_global.IX.GlobalSliders.C);
+SerializeBank(_global.IX.GlobalSliders.D);
+
+@slider
+function Clamp(val, lower, upper) ( min(max(val, lower), upper); );
+
+function UpdateGlobals(bank*)
+(
+  slider2 != bank.a ? bank.a = slider2;
+  slider3 != bank.b ? bank.b = slider3;
+  slider4 != bank.c ? bank.c = slider4;
+  slider5 != bank.d ? bank.d = slider5;
+  slider6 != bank.e ? bank.e = slider6;
+  slider7 != bank.f ? bank.f = slider7;
+  slider8 != bank.g ? bank.g = slider8;
+  slider9 != bank.h ? bank.h = slider9;
+);
+
+slider1 != curBank ?
+(
+  slider1 = curBank = Clamp(slider1, 0, 3);
+  bankchange = 1; // Prevent overwriting of new bank values with current values
+);
+
+slider2 = Clamp(slider2, 0, 100);
+slider3 = Clamp(slider3, 0, 100);
+slider4 = Clamp(slider4, 0, 100);
+slider5 = Clamp(slider5, 0, 100);
+slider6 = Clamp(slider6, 0, 100);
+slider7 = Clamp(slider7, 0, 100);
+slider8 = Clamp(slider8, 0, 100);
+slider9 = Clamp(slider9, 0, 100);
+
+!bankchange ? // Update globals only if bank hasn't changed
+(
+  slider1 == 0 ? UpdateGlobals(_global.IX.GlobalSliders.A) :
+  slider1 == 1 ? UpdateGlobals(_global.IX.GlobalSliders.B) :
+  slider1 == 2 ? UpdateGlobals(_global.IX.GlobalSliders.C) :
+  slider1 == 3 ? UpdateGlobals(_global.IX.GlobalSliders.D) ;
+);
+
+bankchange = 0;
+
+@block
+function UpdateSliders(bank*)
+(
+  slider2 = bank.a; sliderchange(slider2);
+  slider3 = bank.b; sliderchange(slider3);
+  slider4 = bank.c; sliderchange(slider4);
+  slider5 = bank.d; sliderchange(slider5);
+  slider6 = bank.e; sliderchange(slider6);
+  slider7 = bank.f; sliderchange(slider7);
+  slider8 = bank.g; sliderchange(slider8);
+  slider9 = bank.h; sliderchange(slider9);
+);
+
+slider1 == 0 ? UpdateSliders(_global.IX.GlobalSliders.A) :
+slider1 == 1 ? UpdateSliders(_global.IX.GlobalSliders.B) :
+slider1 == 2 ? UpdateSliders(_global.IX.GlobalSliders.C) :
+slider1 == 3 ? UpdateSliders(_global.IX.GlobalSliders.D) ;

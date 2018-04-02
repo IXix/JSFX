@@ -1,0 +1,151 @@
+/*******************************************************************************
+version: 1.0
+desc: Switcher5 (channel input selector)
+author: IX
+provides: . > ../../Switcher5.jsfx
+about:
+  # Switcher 5
+  Send from selectable stereo inputs A, B, C or D to outputs 1+2 with adjustable crossfade to avoid clicks. Optionally block audio from source channels.
+********************************************************************************
+* Copyright 2014 Philip S. Considine
+* License: GPL - http://www.gnu.org/licenses/gpl.html
+*******************************************************************************/
+
+desc:Input switcher
+
+slider1:0<0,3,1{A,B,C,D}>Output source
+slider2:0<-30,12,0.1>Output Level (dB)
+
+slider3:0<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>A Source
+slider4:0<-60,30,0.1>A Level (dB)
+
+slider5:1<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>B Source
+slider6:0<-60,30,0.1>B Level (dB)
+
+slider7:2<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>C Source
+slider8:0<-60,30,0.1>C Level (dB)
+
+slider9:3<0,63,1{1+2,3+4,5+6,7+8,9+10,11+12,13+14,15+16,17+18,19+20,21+22,23+24,25+26,27+28,29+30,31+32,33+34,35+36,37+38,39+40,41+42,43+44,45+46,47+48,49+50,51+52,53+54,55+56,57+58,59+60,61+62,63+64}>D Source
+slider10:0<-60,30,0.1>D Level (dB)
+
+slider11:0<0,1,1{Pass,Block}>Pass aux inputs
+
+slider12:30<0,1000,10>Fade time (ms)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@init
+
+ext_noinit = 1;
+
+function Copy(n*)
+  instance(src, l, r, gain)
+(
+   src = n.src;
+   l = n.l;
+   r = n.r;
+   gain = n.gain;
+);
+
+function Init()
+  instance(src, l, r, gain)
+(
+  src = -1;
+  l = r = -1;
+  gain = 1;
+);
+
+function Set(src, level)
+  instance(l, r, gain)
+(
+  this.src = src;
+  l = src * 2;
+  r = l + 1;
+  gain = 10 ^ (level / 20);
+);
+
+source = -1;
+
+A.Init();
+B.Init();
+C.Init();
+D.Init();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@slider
+
+// Clamp gain values
+slider4 = min(max(slider4, -60), 30);
+slider6 = min(max(slider6, -60), 30);
+slider8 = min(max(slider8, -60), 30);
+slider10 = min(max(slider10, -60), 30);
+
+outGain = 10 ^ (slider2 / 20);
+
+// If active source has changed...
+source != slider1 ||
+(slider1 == 0 && A.src != slider3) ||
+(slider1 == 1 && B.src != slider5) ||
+(slider1 == 2 && C.src != slider7) ||
+(slider1 == 3 && D.src != slider9) ?
+(
+  // Copy previous source for xfade
+  Prev.Copy(Out);
+  
+  // Update source settings
+  A.Set(slider3, slider4);
+  B.Set(slider5, slider6);
+  C.Set(slider7, slider8);
+  D.Set(slider9, slider10);
+
+  // Copy current source to avoid lots of conditionals later
+  slider1 == 0 ? Out.Copy(A);
+  slider1 == 1 ? Out.Copy(B);
+  slider1 == 2 ? Out.Copy(C);
+  slider1 == 3 ? Out.Copy(D);
+  
+  // Signal to fade
+  fadegain = 1;
+  
+  source = slider1;
+);
+
+@block
+
+function onepole(in, target, ms)
+	instance(ms, coeff, ncoeff)
+(
+	ms != this.ms ? // Only calculate coeff if time constant has changed
+	(
+		coeff = exp(-1 / (ms * 0.001 * srate / samplesblock));
+		ncoeff = 1 - coeff;
+		this.ms = ms;
+	);
+	
+	in * coeff + target * ncoeff;
+);
+
+// Smooth gain changes
+fadegain = onepole(fadegain, 0, slider12);
+
+@sample
+
+// Do output
+fadegain ?
+(
+	spl0 = (spl(Prev.l) * Prev.gain * fadegain) + (spl(Out.l) * Out.gain * (1 - fadegain));
+	spl1 = (spl(Prev.r) * Prev.gain * fadegain) + (spl(Out.r) * Out.gain * (1 - fadegain));
+)
+:
+(
+	spl0 = spl(Out.l) * Out.gain;
+	spl1 = spl(Out.r) * Out.gain;
+);
+
+// Block output on channels other than 1/2
+slider11 ?
+(
+  A.l ? spl(A.l) = spl(A.r) = 0;
+  B.l ? spl(B.l) = spl(B.r) = 0;
+  C.l ? spl(C.l) = spl(C.r) = 0;
+  D.l ? spl(D.l) = spl(D.r) = 0;
+);
