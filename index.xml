@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="IX" commit="06d4f9ed8d6cb5ef11d81bc0e660d2d9910e5c53">
+<index version="1" name="IX" commit="038d74cef750a6bbcc5075b6d9bdd7408164a13a">
   <category name="Data">
     <reapack name="ix_keymaps.data" type="data" desc="Key map files for IX effects">
       <metadata>
@@ -521,6 +521,11 @@ wiki entry.
       <version name="1.1" author="IX" time="2018-04-01T20:42:00Z">
         <changelog><![CDATA[+ fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)]]></changelog>
         <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/f34c80a30fa9805561788347ed58c220e47c4ed6/Effects/MIDI/MIDI_Variant.jsfx</source>
+      </version>
+      <version name="1.2" author="IX" time="2018-07-02T20:20:13Z">
+        <changelog><![CDATA[+ fixed scale/sequence file init bug on song load
++ fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)]]></changelog>
+        <source file="../../MIDI_Variant">https://github.com/IXix/JSFX/raw/038d74cef750a6bbcc5075b6d9bdd7408164a13a/Effects/MIDI/MIDI_Variant.jsfx</source>
       </version>
     </reapack>
     <reapack name="MIDI_Velocifier II.jsfx" type="effect" desc="MIDI_Velocifier II (velocity variation generator)">
