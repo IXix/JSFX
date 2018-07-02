@@ -1,5 +1,5 @@
 /*******************************************************************************
-version: 1.1
+version: 1.2
 desc: MIDI_Variant (pattern/scale variation generator)
 author: IX
 provides: . > ../../MIDI_Variant
@@ -12,6 +12,7 @@ about:
   
   Note: Requires user defined scale and sequence files. Samples are provided in the packages "Scale files for IX effects" and "Sequence files for IX effects".
 changelog:
+  + fixed scale/sequence file init bug on song load
   + fixed bug https://forum.cockos.com/showthread.php?p=1918238#post1918238 (thanks Veto!)
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
@@ -55,7 +56,7 @@ statNoteOff = $x80;
 statNoteOn = $x90;
 
 // File change flags
-scaleFile = seqFile -1;
+scaleFile = seqFile = -1;
 
 step = 0;
 
