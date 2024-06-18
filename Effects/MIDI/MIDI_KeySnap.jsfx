@@ -1,5 +1,5 @@
 /*******************************************************************************
-version: 1.0
+version: 1.1
 desc: MIDI_KeySnap (snap notes to musical key)
 author: IX
 provides: . > ../../MIDI_KeySnap
@@ -71,15 +71,15 @@ scaleFile != slider5 ?
   scaleFile = slider5;
   scaleSize = 0;
   fileHandle = file_open(slider5);
-  fileHandle > 0 && file_text(fileHandle) ?
+  fileHandle > 0 ?
   (
-    while
+    file_text(fileHandle) ? while
     (
       file_var(fileHandle, scale[scaleSize]);
       file_avail(fileHandle) ? scaleSize += 1;
     );
     file_close(fileHandle);
-  );
+  ) : scaleFile = -1;
 );
 
 ////////////////////////////////////////////////////////////////////////////////

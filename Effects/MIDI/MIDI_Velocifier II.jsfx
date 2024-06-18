@@ -1,5 +1,5 @@
 /*******************************************************************************
-version: 1.0
+version: 1.1
 desc: MIDI_Velocifier II (velocity variation generator)
 author: IX
 provides: . > ../../MIDI_Velocifier II
@@ -72,15 +72,15 @@ seqFile != slider6 ?
   seqFile = slider6;
   seqSize = 0;
   fileHandle = file_open(slider6);
-  fileHandle > 0 && file_text(fileHandle) ?
+  fileHandle > 0 ?
   (
-    while
+    file_text(fileHandle) ? while
     (
       file_var(fileHandle,seq[seqSize]);
       file_avail(fileHandle) ? seqSize += 1;
     );
     file_close(fileHandle);
-  );
+  ) : seqFile = -1;
 );
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -9,6 +9,9 @@ about:
   first on and last off, so overlapping short notes become one long note.
   
   http://wiki.cockos.com/wiki/index.php/Jesusonic_Effects_Documentation#DuplicateFilter
+
+changelog:
+  + Fixed negative note-off count bug (https://forum.cockos.com/showthread.php?t=181206 - thanks cfillion!) 
 ********************************************************************************
 * Copyright 2007-2011 Philip S. Considine
 * License: GPL - http://www.gnu.org/licenses/gpl.html
@@ -80,7 +83,7 @@ while
         :
         (
           // Note off
-          tracker[note] -= 1;
+          tracker[note] > 0 ? tracker[note] -= 1;
           tracker[note] == 0 ? midisend(offset, msg1, msg23);
         );
       )

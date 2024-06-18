@@ -1,5 +1,5 @@
 /*******************************************************************************
-version: 1.2
+version: 1.3
 desc: MIDI_Variant (pattern/scale variation generator)
 author: IX
 provides: . > ../../MIDI_Variant
@@ -90,15 +90,15 @@ scaleFile != slider5 ?
   scaleFile = slider5;
   scaleSize = 0;
   fileHandle = file_open(slider5);
-  fileHandle > 0 && file_text(fileHandle) ?
+  fileHandle > 0 ?
   (
-    while
+    file_text(fileHandle) ? while
     (
       file_var(fileHandle, scale[scaleSize]);
       file_avail(fileHandle) ? scaleSize += 1;
     );
     file_close(fileHandle);
-  );
+  ) : scaleFile = -1;
 );
 
 // Load sequence if necessary
@@ -107,15 +107,15 @@ seqFile != slider8 ?
   seqFile = slider8;
   seqSize = 0;
   fileHandle = file_open(slider8);
-  fileHandle > 0 && file_text(fileHandle) ?
+  fileHandle > 0 ?
   (
-    while
+    file_text(fileHandle) ? while
     (
       file_var(fileHandle,seq[seqSize]);
       file_avail(fileHandle) ? seqSize += 1;
     );
     file_close(fileHandle);
-  );
+  ) : seqFile = -1;
 );
 
 ////////////////////////////////////////////////////////////////////////////////
